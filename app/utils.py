@@ -56,9 +56,9 @@ def load_data(path: str):
     path = bytes.decode(path.numpy())
     print('path', path)
     file_name = path.split('\\')[-1].split('.')[0]
-    video_path = os.path.join('data', 's1', f'{file_name}.mpg')
-    # alignment_path = os.path.join('data', 'alignments', 's1', f'{file_name}.align')
-    alignment_path = os.path.join('data', 'alignments', 's1', 'bbaf2n.align')
+    video_path = os.path.join('..', 'data', 's1', f'{file_name}.mpg')
+    alignment_path = os.path.join('..', 'data', 'alignments', 's1', f'{file_name}.align')
+    # alignment_path = os.path.join('data', 'alignments', 's1', 'bbaf2n.align')
     frames = load_video(video_path)
     alignments = load_alignments(alignment_path)
     # alignments = None
